@@ -10,7 +10,7 @@
 
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENT TODO Website</title>
+    <title>Minchan Cho Portfolio - Hello Quad</title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="../external/normalize.css">
@@ -69,29 +69,29 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>This project serves as a foundational exercise in developing a modern graphics rendering pipeline using OpenGL 3.3 and WebGL 2. The primary objective was to set up a robust framework capable of rendering a textured quad and to implement custom, dynamic animations through programmable shaders. This foundation will be used for future graphics programming assignments.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li><strong>Vertex Shader Animation:</strong> Created a dynamic vertex shader that applies a time-based sine and cosine function to the vertex positions, resulting in a continuous "wobbling" effect. Additionally, I integrated mouse interaction to allow the quad to follow the user's cursor in Normalized Device Coordinates (NDC).</li>
+            <li><strong>Fragment Shader Animation:</strong> Developed a fragment shader that utilizes a time variable to smoothly cycle the final output color by interpolating (`mix`) between the custom texture data and the quad's original vertex colors.</li>
+            <li><strong>Cross-Platform Deployment:</strong> Successfully configured the CMake build system to compile the C++ codebase into a single HTML executable using Emscripten for web browser deployment.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>One of the most significant challenges in this project was navigating the transition from a native C++ build environment to a WebAssembly deployment. I encountered several issues related to CMake configuration and missing dependencies (like Ninja and Emscripten toolchains). Resolving these issues deepened my understanding of how cross-compilation works.</p>
+        <p>Additionally, while writing the shader code, I initially struggled with mapping screen-space mouse coordinates to OpenGL's -1.0 to 1.0 coordinate system. Fixing this bug not only achieved the desired interactive effect but also solidified my practical understanding of rendering pipelines and coordinate spaces.</p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <!-- TODO demo the webgl version of the project -->
-        <iframe id="demo" src="../webgl/D01HelloQuad/graphics_fun.html"></iframe>
+        <iframe id="demo" src="../webgl/D01HelloQuad/graphics_fun.html" style="width: 1100px; height: 900px; border: none; display: block; margin: 0 auto;"></iframe>
     </div>
 
 
     <!-- Footer -->
     <footer class="footer">
-        <a href="mailto:my.email@digipen.edu" class="footer__link">my.email@digipen.edu</a>
+        <a href="mailto:minchan.cho@digipen.edu" class="footer__link">minchan.cho@digipen.edu</a>
         <ul class="social-list">
             <li class="social-list__item">
                 <a class="social-list__link" href="https://linkedin.com/in/mylinkedinid">

@@ -11,7 +11,7 @@
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>STUDENT TODO Website</title>
+    <title>Minchan Cho Portfolio - Procedural Geometric Modeling</title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="../external/normalize.css">
@@ -61,7 +61,6 @@
 
     <!-- Introduction -->
     <section class="intro">
-        <!-- TODO put the name of the assignment here -->
         <h1 class="section__title section__title--intro">
             Project <strong>Procedural Geometric Modeling</strong>
         </h1>
@@ -71,35 +70,45 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>
+            The objective of this assignment is to implement procedural mesh generation algorithms using C++ and computer graphics mathematics, such as trigonometry and matrix transformations. Starting from basic primitives like a Plane and a Cube, the project extends to dynamically computing the vertices, normal vectors, and UV texture coordinates for complex 3D geometries, including a Sphere, Torus, Cylinder, and Cone. This procedural approach allows for real-time shape rendering and structural modification without relying on pre-baked external asset files.
+        </p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li><strong>Index Buffer & Plane Foundation:</strong> Implemented the <code>build_index_buffer</code> and <code>create_plane_vertices</code> functions to establish a solid foundation for reusing vertex data efficiently and optimizing memory allocation.</li>
+            <li><strong>Procedural Mesh Generation:</strong>
+                <ul>
+                    <li><strong>Cube:</strong> Generated six individual plane faces and mathematically assembled them into a closed 3D cube using precise translation and rotation transformation matrices.</li>
+                    <li><strong>Sphere & Torus:</strong> Utilized spherical coordinate systems and trigonometric functions to dynamically calculate smooth surface geometry, accurate outward-facing normals, and proper UV mapping.</li>
+                    <li><strong>Cylinder & Cone:</strong> Developed the procedural body generation along with a dedicated capping algorithm (<code>add_cap</code>) to seal the top and bottom openings with correct texture coordinate scaling.</li>
+                </ul>
+            </li>
+            <li><strong>Wireframe Topology Conversion:</strong> Created the <code>convert_to_lines_pattern</code> utility function to transform index arrays from triangle primitives into distinct line segments, enabling clean wireframe visualization and structural debugging.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>
+            The primary challenge of this project lay not only in formulating the mathematical equations for complex 3D primitives but also in satisfying the exceptionally strict type safety requirements enforced by the project's compiler configuration. Fine-tuning implicit type promotions between <code>float</code>/<code>double</code> and resolving signed/unsigned mismatches between <code>int</code>/<code>size_t</code> provided a profound debugging experience. Ultimately, witnessing abstract mathematical representations successfully transition into interactively rendered 3D assets inside a web browser deeply reinforced my understanding of the procedural modeling pipeline.
+        </p>
     </div>
 
     <div class="portfolio-item-individual">
-        <h2>Demo</h2>
-        <iframe id="demo" src="../webgl/D02ProceduralMeshes/graphics_fun.html?start=meshes" tabindex="-1"></iframe>
+        <h2>Live Demo</h2>
+        <iframe id="demo" src="../webgl/D02ProceduralMeshes/graphics_fun.html?start=meshes" style="width: 1500px; height: 900px; border: none; display: block; margin: 0 auto;"></iframe>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <a href="mailto:my.email@digipen.edu" class="footer__link">my.email@digipen.edu</a>
+        <a href="mailto:minchan.cho@digipen.edu" class="footer__link">minchan.cho@digipen.edu</a>
         <ul class="social-list">
             <li class="social-list__item">
-                <a class="social-list__link" href="https://linkedin.com/in/mylinkedinid">
+                <a class="social-list__link" href="https://www.linkedin.com/in/minchan-cho-510542408/">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/mygithubid">
+                <a class="social-list__link" href="https://github.com/Melopi">
                     <i class="fab fa-github"></i>
                 </a>
             </li>

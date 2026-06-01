@@ -10,7 +10,7 @@
 
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENT TODO Website</title>
+    <title>Minchan Cho Portfolio - Shadow MappingAssignment </title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="../external/normalize.css">
@@ -69,35 +69,41 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>This project is an interactive 3D graphics demonstration focused on implementing real-time Shadow Mapping. The primary objective was to simulate realistic, dynamic shadows cast by a perspective light source. By utilizing a two-pass rendering pipeline, the scene is first rendered from the light's point of view to generate a depth map, which is then used in the second pass to determine if a fragment is in shadow. The project also features real-time parameter tuning via ImGui and is fully compatible with both Windows x64 and WebGL environments.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li><strong>Camera & View Matrices:</strong> Implemented highly optimized <code>ViewMatrix</code> and <code>ToWorldMatrix</code> calculations using dot products to transform points across camera and world spaces.</li>
+            <li><strong>Texture Enhancements:</strong> Expanded the <code>Texture</code> class to support depth map generation (<code>LoadAsDepthTexture</code>) with specific comparison parameters (<code>GL_COMPARE_REF_TO_TEXTURE</code>) for hardware-accelerated shadow lookups.</li>
+            <li><strong>FrameBuffer Management:</strong> Developed a custom <code>FrameBuffer</code> class to handle off-screen rendering for the shadow pass, accommodating both depth and RGBA8 color formats.</li>
+            <li><strong>Two-Pass Shadow Logic:</strong> Constructed the core C++ rendering logic to record scene depth from the light's perspective (Pass 1) and apply shadows during the main camera render (Pass 2).</li>
+            <li><strong>GLSL Shaders:</strong> Wrote custom vertex and fragment shaders to compute shadow coordinates, perform projection texture lookups (<code>textureProj</code>), and apply advanced visual effects like Gamma Correction and Exponential Fog.</li>
+            <li><strong>Debugging Visualizers:</strong> Implemented visual debugging tools to render the light's viewing frustum in 3D space and display the generated 2D depth texture directly on the screen.</li>
+            <li><strong>Cross-Platform Fixes:</strong> Resolved strict type-casting issues (signed vs. unsigned integers) for robust WebGL compilation using Emscripten.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>Implementing shadow mapping was a challenging but incredibly rewarding experience. One of the primary difficulties was ensuring the accurate transformation of coordinates between World, View, and Shadow spaces. Relying on fundamental math (like dot products) instead of pre-built inverse functions for the Camera class greatly improved my understanding of spatial transformations.</p>
+        
+        <p>Additionally, transitioning the project from a Windows environment to a WebGL build introduced unexpected compiler strictness, such as implicit conversion warnings with Emscripten. Addressing these issues not only made the codebase more robust but also taught me the importance of writing safe, cross-platform C++ code. Ultimately, this project solidified my grasp of multi-pass rendering, framebuffers, and the mathematical foundations of real-time lighting.</p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <iframe id="demo" src="../webgl/D05ShadowMapping/graphics_fun.html?start=shadow" tabindex="-1"></iframe>
+        <iframe id="demo" src="../webgl/D05ShadowMapping/graphics_fun.html?start=shadow" style="width: 1500px; height: 900px; border: none; display: block; margin: 0 auto;"></iframe>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <a href="mailto:my.email@digipen.edu" class="footer__link">my.email@digipen.edu</a>
+        <a href="mailto:minchan.cho@digipen.edu" class="footer__link">minchan.cho@digipen.edu</a>
         <ul class="social-list">
             <li class="social-list__item">
-                <a class="social-list__link" href="https://linkedin.com/in/mylinkedinid">
+                <a class="social-list__link" href="https://www.linkedin.com/in/minchan-cho-510542408/">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/mygithubid">
+                <a class="social-list__link" href="https://github.com/Melopi">
                     <i class="fab fa-github"></i>
                 </a>
             </li>

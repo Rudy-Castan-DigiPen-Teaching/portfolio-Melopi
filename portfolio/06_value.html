@@ -10,7 +10,7 @@
 
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENT TODO Website</title>
+    <title>Minchan Cho Portfolio - Value Noise</title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="../external/normalize.css">
@@ -69,35 +69,37 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>The primary objective of this project was to implement a robust Value Noise algorithm in C++ for generating procedural textures. This involved integrating the noise generation logic into a custom graphics framework and utilizing OpenGL shaders to correctly visualize the resulting textures across multiple dimensions.</p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li>Implemented 1D, 2D, and 3D value noise algorithms in C++ utilizing <code> glm::vec4</code> data types.</li>
+            <li>Developed a permutation hashing system with Fisher-Yates shuffling for efficient and randomized noise computation.</li>
+            <li>Applied adjustable interpolation methods (Linear, Bilinear, and Trilinear) combined with customizable smoothing functions (e.g., Quintic).</li>
+            <li>Extended the texture management system (<code>Texture::UploadAsRGBA</code>) to dynamically upload generated pixel data to the GPU.</li>
+            <li>Created specific vertex and fragment shaders to scale, interpolate, and map procedural textures seamlessly onto geometry.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>This project solidified the mathematical concepts behind procedural generation, particularly the accurate calculation of noise coordinates and the application of multi-dimensional interpolation. A key technical challenge was ensuring the precise alignment of data structures between the CPU noise generation and the GPU texture rendering pipeline. Debugging texture scaling and coordinate mapping in the shaders highlighted the critical importance of verifying data flow across the CPU-GPU boundary. The completed implementation successfully generates seamless, adjustable noise patterns while maintaining stable cross-platform performance.</p>
     </div>
 
     <div class="portfolio-item-individual">
         <h2>Demo</h2>
-        <iframe id="demo" src="../webgl/D06ValueNoise/graphics_fun.html?start=value" tabindex="-1"></iframe>
+        <iframe id="demo" src="../webgl/D06ValueNoise/graphics_fun.html?start=value"  style="width: 1500px; height: 900px; border: none; display: block; margin: 0 auto;"></iframe>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <a href="mailto:my.email@digipen.edu" class="footer__link">my.email@digipen.edu</a>
+        <a href="mailto:minchan.cho@digipen.edu" class="footer__link">minchan.cho@digipen.edu</a>
         <ul class="social-list">
             <li class="social-list__item">
-                <a class="social-list__link" href="https://linkedin.com/in/mylinkedinid">
+                <a class="social-list__link" href="https://www.linkedin.com/in/minchan-cho-510542408/">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/mygithubid">
+                <a class="social-list__link" href="https://github.com/Melopi">
                     <i class="fab fa-github"></i>
                 </a>
             </li>
@@ -110,3 +112,4 @@
 </body>
 
 </html>
+

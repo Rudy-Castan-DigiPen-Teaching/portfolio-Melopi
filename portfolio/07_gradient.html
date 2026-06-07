@@ -9,7 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="../img/face.jpg">
     <!-- Help auto scale for desktop & mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENT TODO Website</title>
+    <title>Minchan Cho Portfolio - Gradient Noise</title>
 
     <!-- Normalize the difference across browsers  https://necolas.github.io/normalize.css/ -->
     <link rel="stylesheet" href="../external/normalize.css">
@@ -68,17 +68,22 @@
 
     <div class="portfolio-item-individual">
         <h2>Project Overview</h2>
-        <p>Provide a brief description of the project, its purpose, and what you aimed to achieve.</p>
+        <p>
+            In this project, I implemented an <strong>Improved 3D Gradient (Perlin) Noise</strong> algorithm in GLSL to procedurally generate seamless textures and dynamic 3D surfaces. The primary objective was to extend a custom C++ graphics framework to support advanced texture formats (e.g., R32F) and offscreen framebuffer rendering. By computing noise values entirely on the GPU and utilizing techniques like quintic smoothing, I successfully generated highly organic, continuous patterns including Fractal Sum, Turbulence, Marble, and Wood. This project significantly deepened my understanding of procedural generation and the seamless integration between OpenGL framework logic and complex shader algorithms.
+        </p>
 
         <h2>Tasks Completed</h2>
         <ul>
-            <li>Describe the tasks you completed for this project.</li>
-            <li>Be specific about your contributions and the technologies used.</li>
+            <li>Implemented Improved 3D Perlin Gradient Noise in GLSL with 12 fixed gradient directions and quintic fading.</li>
+            <li>Generated procedural seamless textures and diverse noise patterns (Fractal, Turbulence, Marble, Wood).</li>
+            <li>Extended the C++ graphics framework to support new color formats (RGBA32F, R32F) for the Framebuffer and Texture loading systems.</li>
+            <li>Developed vertex and fragment shaders to visualize the 3D noise both as a 2D texture slice and as a displaced 3D terrain surface.</li>
         </ul>
 
         <h2>Reflection</h2>
-        <p>Reflect on the project, discussing any challenges faced, solutions implemented, and what you learned from the
-            experience.</p>
+        <p>
+            One of the most significant challenges was ensuring the seamless tiling of the noise and correctly matching the vertex attribute locations between the C++ framework and the GLSL shaders. Debugging visual artifacts, such as flat gray planes or segmented ridges, taught me the critical importance of proper uniform binding (like tile scaling) and precise interpolation methods (quintic fade) in noise functions. Through resolving these issues, I gained a much stronger grasp of the OpenGL pipeline and shader debugging.
+        </p>
     </div>
 
     <div class="portfolio-item-individual">
@@ -88,15 +93,15 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <a href="mailto:my.email@digipen.edu" class="footer__link">my.email@digipen.edu</a>
+        <a href="mailto:minchan.cho@digipen.edu" class="footer__link">minchan.cho@digipen.edu</a>
         <ul class="social-list">
             <li class="social-list__item">
-                <a class="social-list__link" href="https://linkedin.com/in/mylinkedinid">
+                <a class="social-list__link" href="https://www.linkedin.com/in/minchan-cho-510542408/">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </li>
             <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/mygithubid">
+                <a class="social-list__link" href="https://github.com/Melopi">
                     <i class="fab fa-github"></i>
                 </a>
             </li>
